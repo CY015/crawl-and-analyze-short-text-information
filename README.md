@@ -5,6 +5,6 @@
 - 浏览器响应文件demo
 
 ## python环境
-Python 3.7
-requests
+Python 3.7  
+requests  
 pandas
