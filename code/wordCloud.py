@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding:utf8 -*- 
 import jieba
 import re, csv
 import numpy as np

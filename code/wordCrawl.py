@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding:utf8 -*- 
 import os, sys, time
 import requests
 import json
@@ -91,7 +93,10 @@ def getComment():
         commentInfo = json.loads(comRe)
         # 没有评论
         # 写None而不是写Null!
-        if commentInfo["data"]["replies"] == None:
+        try:
+            if commentInfo["data"]["replies"] == None:
+                continue
+        except:
             continue
 
         for m in range(len(commentInfo["data"]["replies"])):
@@ -153,8 +158,12 @@ def getSubComment(oid, rpid, pages):
             break
         subCommentInfo = json.loads(comRe.text)
 
-        if subCommentInfo["data"]["replies"] == None:
-            break
+        try:
+            if subCommentInfo["data"]["replies"] == None:
+                break
+        except:
+            continue
+        
         for n in range(len(subCommentInfo["data"]["replies"])):
             subInfo = subCommentInfo["data"]["replies"][n]
             subUser.append([subInfo["member"]["mid"],
