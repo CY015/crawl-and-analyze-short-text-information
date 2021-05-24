@@ -45,15 +45,9 @@ def getAllVideoList(uid, size, page, mode):
 
 '''
 获取某视频下的评论
-TODO: 根据av号获取评论
+TODO 添加视频av号作为参数，循环爬取?
 '''
 def getComment():
-    # avID = []
-    # page = []
-    # for n in range(0,len(videoData)):
-    #     avID.append(videoData[n][1])
-    #     page.append(int((videoData[n][3])/40))
-
     # # 循环爬取每个视频的评论
     # for i in range(0,len(avID)):
     #     for j in range(0, page[i]):
@@ -137,7 +131,7 @@ def getComment():
        pages: 页数  
 '''
 def getSubComment(oid, rpid, pages):
-    # 子评论响应地址
+    # 子评论响应地址demo
     # https://api.bilibili.com/x/v2/reply/reply?&pn=1&type=1&oid=800760067&ps=20&root=3889395859
     subComment = []
     subUser = []
@@ -178,7 +172,7 @@ def getSubComment(oid, rpid, pages):
 # 获取某视频的弹幕
 # 
 def getDanmu():
-    print('TODO')
+    pass
 
 # 存储信息
 def save2File(commentList, userList):
