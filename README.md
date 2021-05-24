@@ -20,6 +20,10 @@
 ## 数据(data/)
 1. `commentInfo.csv`评论+评论用户信息的集合
 2. `videoList.csv`发布视频的相关信息
+3. `originalComment.txt`评论jieba切分词
+4. `content.jpg`词云mask图
+### 输出(output/)
+- 词云图
 
 
 ## Dependency
