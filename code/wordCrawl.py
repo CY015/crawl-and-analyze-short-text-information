@@ -45,7 +45,7 @@ def getAllVideoList(uid, size, page, mode):
 
 '''
 获取某视频下的评论
-TODO 添加视频av号作为参数
+TODO 添加视频av号作为参数，循环爬取?
 '''
 def getComment():
     # # 循环爬取每个视频的评论

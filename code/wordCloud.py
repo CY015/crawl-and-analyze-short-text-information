@@ -31,7 +31,9 @@ def generate_wordCloud(textPath, wordCloudPath, ice_mask):
         background_color='white',
         width=1366,height=768,
         mask=ice_mask,
-        stopwords=STOPWORDS.update(['中奖率','录取','通知书','吧','我','热词','系列','热词系列',' ','增加','拉低','怎么','这个','回复','哈哈','的','在','抽个','是']),
+        stopwords=STOPWORDS.update(['中奖率','录取','通知书','吧','我','热词','系列','热词系列',' ',
+                                    '增加','拉低','怎么','这个','回复','哈哈','的','在','抽个','是',
+                                    '啊','这','吗','你','了','来','抽','知识']),
         font_path='C:\Windows\Fonts\simfang.ttf',
         max_words=300
     )
