@@ -2,6 +2,8 @@
 爬取UP主：[吃花椒的喵酱](https://space.bilibili.com/2026561407/)
 
 ## API
+### 评论请求url地址
+- 浏览器`F12`打开开发者模式，在点开视频向下滚动到评论区时，筛选`JS`可以观察到Request URL, 看下其Resonpse即可看到评论区明细
 
 ## 源码(code/)
 ### 爬取评论(wordCrawl.py)
@@ -37,7 +39,7 @@
 ## Dependency
 Python 3.7  
 requests  
-pandas
+pandas  
 numpy  
 jieba  
 matplotlib  
