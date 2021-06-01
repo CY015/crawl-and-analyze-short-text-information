@@ -46,6 +46,6 @@ def generate_wordCloud(textPath, wordCloudPath, ice_mask):
 
 
 if __name__ == '__main__':
-    # save_comment('../data/commentInfo.csv', '../data/originalComment.txt')
+    save_comment('../data/raw/commentInfo_800760067.csv', '../data/originalComment.txt')
     Ice_mask = np.array(image.open('../data/content.jpg'))
     generate_wordCloud('../data/originalComment.txt', '../data/output/ice.png', Ice_mask)

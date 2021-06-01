@@ -3,7 +3,6 @@
 
 ## API
 
-
 ## 源码(code/)
 ### 爬取评论(wordCrawl.py)
 1. 找到想要爬取的UP主首页，获得她发布的视频列表
@@ -46,3 +45,4 @@ wordcloud
 
 ## Reference
 1. [BiliBili野生API文档](https://github.com/SocialSisterYi/bilibili-API-collect)
+2. [Baidu NLP文档](http://ai.baidu.com/ai-doc/NLP/tk6z52b9z)

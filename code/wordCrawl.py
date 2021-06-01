@@ -31,7 +31,7 @@ def getAllVideoList(uid, size, page, mode):
         
         # 接收Response文件
         videoInfo = json.loads(re)
-        f = open('../space_videoList.json','w',encoding='utf-8')
+        f = open('../response/space_videoList.json','w',encoding='utf-8')
         f.write(re)
         
         # 读取bv号，av号，视频标题，评论数量，播放数量，弹幕数量
@@ -41,47 +41,38 @@ def getAllVideoList(uid, size, page, mode):
                             video["play"], video["video_review"]])
         
         df = pd.DataFrame(videoData, columns=['BV','AV','Title','Comments_count','Plays_count','Danmu_count'])
-        df.to_csv('../data/videoList.csv', index=False, encoding='utf_8_sig')            
+        df.to_csv('../data/videoList.csv', index=False, encoding='utf_8_sig')           
 
 '''
 获取某视频下的评论
 TODO 添加视频av号作为参数，循环爬取?
 '''
 def getComment():
-    # # 循环爬取每个视频的评论
-    # for i in range(0,len(avID)):
-    #     for j in range(0, page[i]):
-    #         # comURL = "https://api.bilibili.com/x/v2/reply?&pn=%s&type=1&oid=%s&sort=1" % (avID[9], str(j))
-    #         # comRe = requests.get(comURL,headers = header).text
-    #         # print(comRe+'\n\n')
+    # 循环爬取每个视频的评论
 
-    #         url = 'https://api.bilibili.com/x/v2/reply?type=1&oid=%s&pn=%s&sort=1' % (avID[i],str(j))
-    #         r = requests.get(url,headers=header)
-    #         # print(r.text)
-    #         f = open('./space_response.json','w',encoding='utf-8')
-    #         f.write(r.text)
-
-    #         # test
-    #         if j == 0:
-    #             break
-    #     if i == 0:
-    #         break
-
+    # 三个视频的comURL(VLOG.001-003)
     comURL = 'https://api.bilibili.com/x/v2/reply?&pn=1&type=1&oid=800760067&ps=20&sort=1'
+    # comURL = 'https://api.bilibili.com/x/v2/reply?&pn=1&type=1&oid=246182323&ps=20&sort=1'
+    # comURL = 'https://api.bilibili.com/x/v2/reply?&pn=1&type=1&oid=501153233&ps=20&sort=1'
     comRe = requests.get(comURL,headers = header).text
     commentInfo = json.loads(comRe)
     root_count = commentInfo["data"]["page"]["count"]
 
     # 获取评论页数，这里把页数减少一些, 筛掉一些没用或者有攻击性的? B站会将没用的评论放在最后
-    page_count = int(root_count) // 20 - 10
+    page_count = int(root_count) // 20 - 5
 
-    # 只爬冰冰入驻视频
+    # 只爬单个视频
     for j in range(1, page_count):
+        print(page_count)
+        
+        if j % 10 == 0:
+            time.sleep(5)
         comURL = 'https://api.bilibili.com/x/v2/reply?&pn=%s&type=1&oid=800760067&ps=20&sort=1' % (str(j))
-        # time.sleep(1)
+
         try:
             comRe = requests.get(comURL,headers = header).text
         except:
+            print('服务器主机无响应根评论')
             continue
         
         commentInfo = json.loads(comRe)
@@ -89,6 +80,7 @@ def getComment():
         # 写None而不是写Null!
         try:
             if commentInfo["data"]["replies"] == None:
+                print('No comment')
                 continue
         except:
             continue
@@ -109,14 +101,16 @@ def getComment():
             # rpid 根评论用户编号   rcount 子评论总数   subReply_count 子评论页数(舍弃最后一页评论)
             user_rpid = commentInfo["data"]["replies"][m]["rpid"]
             subReply_count = int(commentInfo["data"]["replies"][m]["rcount"]) // 10
+
+            # 上面更换vlog的时候这里也要相应的换
+            # # VLOG.001
             subUser, subComment = getSubComment(800760067, user_rpid, subReply_count)
+            # # VLOG.002
+            # subUser, subComment = getSubComment(246182323, user_rpid, subReply_count)
+            # # VLOG.003
+            # subUser, subComment = getSubComment(501153233, user_rpid, subReply_count)
             comment.extend(subComment)
             user.extend(subUser)
-            # 测试爬取第一条评论的子评论
-            # if m == 0:
-            #     # print(comment)
-            #     # print(user)
-            #     break 
             
         # 测试
         # if j == 1:
@@ -135,26 +129,38 @@ def getSubComment(oid, rpid, pages):
     # https://api.bilibili.com/x/v2/reply/reply?&pn=1&type=1&oid=800760067&ps=20&root=3889395859
     subComment = []
     subUser = []
-    # 假代理
-    # https://blog.csdn.net/c406495762/article/details/60137956
+
     for k in range(1, pages+1):
         # 防止频繁访问API被封
-        time.sleep(1)
+        if k % 5 == 0:
+            time.sleep(3)
         url = 'https://api.bilibili.com/x/v2/reply/reply?&pn=%s&type=1&oid=%s&ps=10&root=%s' % (str(k),str(oid),str(rpid))
+        
         try:
             comRe = requests.get(url, headers = header)
             print(comRe.status_code)
         except:
+            print('服务器主机无响应子评论')
             continue
-            print('服务器主机无响应')
+            
         if comRe.status_code == 412:
             print("请求频繁\n")
-            break
+            time.sleep(10)
+            # continue
+            try:
+                comRe = requests.get(url, headers = header)
+                print(comRe.status_code)
+                if comRe.status_code == 412:
+                    continue
+            except:
+                print('服务器主机无响应')
+                continue
+
         subCommentInfo = json.loads(comRe.text)
 
         try:
             if subCommentInfo["data"]["replies"] == None:
-                break
+                continue
         except:
             continue
         
@@ -185,7 +191,7 @@ def save2File(commentList, userList):
         Info.append(sub)
     title = ['comment','user_id', 'user_name', 'user_level', 'user_verify']
     df = pd.DataFrame(columns=title, data=Info)
-    df.to_csv('../data/commentInfo.csv', index=False, encoding='utf_8_sig')
+    df.to_csv('../data/raw/commentInfo.csv', index=False, encoding='utf_8_sig')
 
 if __name__ == "__main__":
     header = {
