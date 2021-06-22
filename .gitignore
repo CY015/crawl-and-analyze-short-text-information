@@ -4,3 +4,7 @@ code/test.py
 
 response/*.txt
 response/*.html
+
+data/originDict.txt
+
+.vscode
