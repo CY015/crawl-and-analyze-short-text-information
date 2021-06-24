@@ -27,6 +27,7 @@ from wordcloud import WordCloud, STOPWORDS
 import PIL.Image as image
 
 def save_comment(srcPath, destPath):
+    # 增加一些jieba不认识的词语
     jieba.suggest_freq("王冰冰", True)
     jieba.suggest_freq("冰冰", True)
     jieba.suggest_freq("冰冰姐", True)
