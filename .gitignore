@@ -1,10 +1,15 @@
 code/.idea
 code/__pycache__
 code/test.py
+code/customizedDict2.py
 
 response/*.txt
 response/*.html
+response/word2vec_test.json
+response/word2vec_test2.json
 
 data/originDict.txt
+data/word_test.csv
 
 .vscode
+whl/

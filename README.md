@@ -51,6 +51,13 @@ jieba
 matplotlib  
 wordcloud
 
+--
+**注意**
+1. 装完`pandas`之后会覆盖新的`mkl`的模块，导致`gensim`导入失败
+2. Python3.7的`numpy`轮子有问题，装不上，使用3.6的可以
+--
+
 ## Reference
 1. [BiliBili野生API文档](https://github.com/SocialSisterYi/bilibili-API-collect)
 2. [Baidu NLP文档](http://ai.baidu.com/ai-doc/NLP/tk6z52b9z)
+3. [轮子地址](https://www.lfd.uci.edu/~gohlke/pythonlibs/)

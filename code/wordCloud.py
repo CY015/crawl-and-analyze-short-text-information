@@ -1,6 +1,3 @@
-#!/usr/bin/python
-# -*- coding:utf8 -*- 
-
 #                     _ooOoo_
 #                    o8888888o
 #                    88" . "88
@@ -30,6 +27,17 @@ from wordcloud import WordCloud, STOPWORDS
 import PIL.Image as image
 
 def save_comment(srcPath, destPath):
+    jieba.suggest_freq("王冰冰", True)
+    jieba.suggest_freq("冰冰", True)
+    jieba.suggest_freq("冰冰姐", True)
+    jieba.suggest_freq("喵酱", True)
+    jieba.suggest_freq("吃花椒", True)
+    jieba.suggest_freq("吃花椒的喵酱", True)
+    jieba.suggest_freq("老婆", True)
+    jieba.suggest_freq("何同学", True)
+    jieba.suggest_freq("饼叔", True)
+    jieba.suggest_freq("食频道", True)
+    jieba.suggest_freq("毕导", True)
 
     with open(srcPath,'r',encoding='utf-8') as rdata:
         csv_read = csv.reader(rdata)
@@ -41,9 +49,9 @@ def save_comment(srcPath, destPath):
         new_data = re.findall('[\u4e00-\u9fa5]+', str(col), re.S)
 
         # 分词
-        words = jieba.cut(str(new_data), cut_all=False)
+        words = jieba.cut(' '.join(new_data), cut_all=False)
 
-        ndata = ' '.join(words)
+        ndata = ''.join(words)
         data.write(ndata)
 
 
@@ -55,9 +63,10 @@ def generate_wordCloud(textPath, wordCloudPath, ice_mask):
         mask=ice_mask,
         stopwords=STOPWORDS.update(['中奖率','录取','通知书','吧','我','热词','系列','热词系列',' ',
                                     '增加','拉低','怎么','这个','回复','哈哈','的','在','抽个','是',
-                                    '啊','这','吗','你','了','来','抽','知识']),
+                                    '啊','这','吗','你','了','来','抽','知识','知识增加','好家伙','拉低中奖率',
+                                    '打','抽我','妙啊','滑稽']),
         font_path='C:\Windows\Fonts\simfang.ttf',
-        max_words=300
+        max_words=250
     )
 
     words = open(textPath, 'r', encoding='utf-8').read()
@@ -68,6 +77,6 @@ def generate_wordCloud(textPath, wordCloudPath, ice_mask):
 
 
 if __name__ == '__main__':
-    save_comment('../data/raw/commentInfo_800760067.csv', '../data/originalComment.txt')
+    # save_comment('../data/raw/commentInfo_800760067.csv', '../data/originalComment.txt')
     Ice_mask = np.array(image.open('../data/content.jpg'))
     generate_wordCloud('../data/originalComment.txt', '../data/output/ice.png', Ice_mask)
