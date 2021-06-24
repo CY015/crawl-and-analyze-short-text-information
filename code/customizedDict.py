@@ -79,8 +79,10 @@ def removeDuplication(originalDict, cusCorpus):
 
 # TODO
 # KNN用Annoy实现 TF-IDF评估
-# https://blog.csdn.net/shuihupo/article/details/85162237
 # 用例句测试词典分词效果
+# https://blog.csdn.net/shuihupo/article/details/85162237
+# https://blog.csdn.net/churximi/article/details/51472300?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.control
+
 # word2vec(调用百度API) 
 def wordToVec(wordList):
     # APPID AK SK  在应用控制台可以看 
