@@ -11,6 +11,7 @@ response/word2vec_test2.json
 data/originDict.txt
 data/word_test.csv
 data/originalComment.txt
+data/models/word2vec_100dim.model
 
 .vscode
 whl/
