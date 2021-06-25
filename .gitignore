@@ -9,8 +9,8 @@ response/word2vec_test.json
 response/word2vec_test2.json
 
 data/originDict.txt
-data/originalComment.txt
 data/word_test.csv
+data/originalComment.txt
 
 .vscode
 whl/
