@@ -24,7 +24,10 @@
 
 
 ### 定制化词典(customizedDict.py)
+### 加载word2vec模型查找最近几个词(customizedDict2.py)
 
+**注意事项**
+1. 取出词典后要将utf-16转成utf-8，`jieba`加载自己的词典时只支持utf-8格式的 [格式转换代码参考](https://www.jianshu.com/p/5929a3876edd)
 
 ## 浏览器响应文件demo(response/)
 1. `comment_ReplyDemo.json`     第一个视频下的第一页(20条)评论

@@ -1,7 +1,6 @@
 code/.idea
 code/__pycache__
 code/test.py
-code/customizedDict2.py
 
 response/*.txt
 response/*.html

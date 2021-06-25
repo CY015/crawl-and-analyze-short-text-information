@@ -29,8 +29,8 @@ import json
 import logging
 
 import jieba
+import jieba.analyse
 import pandas as pd
-from aip import AipNlp
 from gensim.models import word2vec, Word2Vec
 
 # 把词典中的词语取出
@@ -70,9 +70,9 @@ def removeDuplication(originalDict, cusCorpus):
             newWord.append(x)
 
     # 把每句话的新词语一行行写进txt
-    ndata = '\n'.join(newWord)
-    with open('../data/Comment_duplicate.txt','w',encoding='utf_8') as f:
-        f.writelines(ndata)
+    # ndata = '\n'.join(newWord)
+    # with open('../data/Comment_duplicate.txt','w',encoding='utf_8') as f:
+    #     f.writelines(ndata)
 
     return newWord
 
@@ -112,8 +112,8 @@ def wordToVec(wordList):
         with open('../data/Comment.txt', 'w', encoding="utf_8") as f:
             f.writelines(' '.join(w))
 
-    # 生成分词去重后评论的vec
-    with open('../data/Comment_duplicate.txt', 'r', encoding='utf_8') as f2:
+    # 评论分词后的vec
+    with open('../data/Comment.txt', 'r', encoding='utf_8') as f2:
         sentences2 = word2vec.LineSentence(f2)
         model = word2vec.Word2Vec(sentences2, hs=1, min_count=1, window=5, size=50)
 
@@ -132,12 +132,33 @@ def wordToVec(wordList):
 def TF_IDF_jieba():
     # 设置停用词
     jieba.analyse.set_stop_words('../data/dict/stopwords.txt')
-    with open('../data/originalComment.txt', 'r', encoding="utf_8") as f:
-        topk = jieba.analyse.extract_tags(f.read(), topK=10)
+    with open('../data/Comment.txt', 'r', encoding='utf_8') as f:
+        topk = jieba.analyse.extract_tags(f.read(), topK=20)
 
-    print(', '.join(topk)) # 冰冰，冰冰的，我的心，星星，老婆，粉丝，百万，视频，播放，喜欢
+    with open('../data/dict/Dict.txt', 'r', encoding='utf_16') as dic:
+        dictionary = dic.read().splitlines()
+
+    newWords = []
+    for word in topk:
+        if word not in dictionary:
+            newWords.append(word)
+    
+    with open('../data/dict/cusDict.txt', 'a+', encoding='utf_16') as newdict:
+        newdict.write('\n')
+        for nword in newWords:
+            # print(nword)
+            newdict.write(nword + '\n')
+    # print(', '.join(topk)) # 冰冰，冰冰的，我的心，星星，老婆，粉丝，百万，视频，播放，喜欢
+
+# 测试分词效果
+def test():
+    print('/'.join(jieba.cut('天冷了，我的心是冰冰的')))
+    jieba.load_userdict('../data/dict/cusDict.txt')
+    print('/'.join(jieba.cut('天冷了，我的心是冰冰的')))
 
 if __name__ == '__main__':
+    # 确保jieba分出来这些名字
+    # 在测试时注释掉下面的词
     jieba.add_word("王冰冰")
     jieba.add_word("冰冰")
     jieba.add_word("冰冰姐")
@@ -154,6 +175,10 @@ if __name__ == '__main__':
 
     words = readCorpus('../data/originDict.txt')    #len(words)   # 64847
     newWord = removeDuplication(words, '../data/raw/commentInfo_800760067.csv')
-    # wordToVec(words)
+    # words是词典的
+    # newWord是评论
+    # 使用时记得在wordToVec中注释
+    wordToVec(words)
     wordToVec(newWord)
-    # TF_IDF_jieba()
+    TF_IDF_jieba()
+    test()
