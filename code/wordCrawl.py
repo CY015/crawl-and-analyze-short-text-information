@@ -175,10 +175,6 @@ def getSubComment(oid, rpid, pages):
 
     return subUser, subComment
 
-# 获取某视频的弹幕
-# 
-def getDanmu():
-    pass
 
 # 存储信息
 def save2File(commentList, userList):
@@ -202,4 +198,3 @@ if __name__ == "__main__":
     getComment()
 
     # url = 'https://api.bilibili.com/x/v2/dm/history?type=1&oid='+cid+'&date='+time
-    # getDanmu()
