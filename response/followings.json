@@ -1,0 +1,451 @@
+{
+    "code": 0,
+    "message": "0",
+    "ttl": 1,
+    "data": {
+        "list": [
+            {
+                "mid": 39627524,
+                "attribute": 0,
+                "mtime": 1609353400,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "食贫道",
+                "face": "http://i2.hdslb.com/bfs/face/eef12b850c10b0d7a7929236abb08604955823c0.jpg",
+                "sign": "vx：sihechuangyi ",
+                "official_verify": {
+                    "type": 0,
+                    "desc": "2020年度正能量UP主、bilibili 2020百大UP主"
+                },
+                "vip": {
+                    "vipType": 2,
+                    "vipDueDate": 1654963200000,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 1,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "http://i0.hdslb.com/bfs/vip/label_annual.png",
+                        "text": "年度大会员",
+                        "label_theme": "annual_vip",
+                        "text_color": "#FFFFFF",
+                        "bg_style": 1,
+                        "bg_color": "#FB7299",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 1,
+                    "nickname_color": "#FB7299",
+                    "avatar_subscript_url": "http://i0.hdslb.com/bfs/vip/icon_Certification_big_member_22_3x.png"
+                }
+            },
+            {
+                "mid": 163637592,
+                "attribute": 0,
+                "mtime": 1609353410,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "老师好我叫何同学",
+                "face": "http://i0.hdslb.com/bfs/face/346d9c5e919a991216f4f5a950fb7b73cdd22fff.jpg",
+                "sign": "放假会做贼有意思的视频    工作事宜联系：xhaxx1123@163.com",
+                "official_verify": {
+                    "type": 0,
+                    "desc": "2020年度最佳作品奖UP主、bilibili 2020百大UP主"
+                },
+                "vip": {
+                    "vipType": 2,
+                    "vipDueDate": 1663862400000,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 1,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "http://i0.hdslb.com/bfs/vip/label_annual.png",
+                        "text": "年度大会员",
+                        "label_theme": "annual_vip",
+                        "text_color": "#FFFFFF",
+                        "bg_style": 1,
+                        "bg_color": "#FB7299",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 1,
+                    "nickname_color": "#FB7299",
+                    "avatar_subscript_url": "http://i0.hdslb.com/bfs/vip/icon_Certification_big_member_22_3x.png"
+                }
+            },
+            {
+                "mid": 254463269,
+                "attribute": 2,
+                "mtime": 1609353424,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "毕导THU",
+                "face": "http://i2.hdslb.com/bfs/face/a8bd686a985bb3e30a992948e912effb46a2d018.jpg",
+                "sign": "一名数理化狂热爱好者！公众号/微博：毕导THU。B站商务联系: s1012295607",
+                "official_verify": {
+                    "type": 0,
+                    "desc": "bilibili 2020百大UP主、知名UP主"
+                },
+                "vip": {
+                    "vipType": 2,
+                    "vipDueDate": 1635177600000,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 1,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "http://i0.hdslb.com/bfs/vip/label_annual.png",
+                        "text": "年度大会员",
+                        "label_theme": "annual_vip",
+                        "text_color": "#FFFFFF",
+                        "bg_style": 1,
+                        "bg_color": "#FB7299",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 1,
+                    "nickname_color": "#FB7299",
+                    "avatar_subscript_url": "http://i0.hdslb.com/bfs/vip/icon_Certification_big_member_22_3x.png"
+                }
+            },
+            {
+                "mid": 494819449,
+                "attribute": 0,
+                "mtime": 1609857024,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "刘骁骞",
+                "face": "http://i1.hdslb.com/bfs/face/e92255f2c602b530778ebc794ece477e54c0417c.jpg",
+                "sign": "对的人 事 物 值得等待⌛️",
+                "official_verify": {
+                    "type": 0,
+                    "desc": "驻外记者刘骁骞"
+                },
+                "vip": {
+                    "vipType": 0,
+                    "vipDueDate": 0,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 0,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "",
+                        "text": "",
+                        "label_theme": "",
+                        "text_color": "",
+                        "bg_style": 0,
+                        "bg_color": "",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 0,
+                    "nickname_color": "",
+                    "avatar_subscript_url": ""
+                }
+            },
+            {
+                "mid": 456664753,
+                "attribute": 2,
+                "mtime": 1611062142,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "央视新闻",
+                "face": "http://i1.hdslb.com/bfs/face/366c1c19da264120d4c2ac45b6ac5e4f5fb5b71a.jpg",
+                "sign": "央视新闻官方账号",
+                "official_verify": {
+                    "type": 1,
+                    "desc": "央视新闻官方账号"
+                },
+                "vip": {
+                    "vipType": 2,
+                    "vipDueDate": 1643558400000,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 1,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "http://i0.hdslb.com/bfs/vip/label_annual.png",
+                        "text": "年度大会员",
+                        "label_theme": "annual_vip",
+                        "text_color": "#FFFFFF",
+                        "bg_style": 1,
+                        "bg_color": "#FB7299",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 1,
+                    "nickname_color": "#FB7299",
+                    "avatar_subscript_url": "http://i0.hdslb.com/bfs/vip/icon_Certification_big_member_22_3x.png"
+                }
+            },
+            {
+                "mid": 466272,
+                "attribute": 0,
+                "mtime": 1613467748,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "机智的党妹",
+                "face": "http://i0.hdslb.com/bfs/face/f6652b5923648c0555029f6f96d79206c33dccd6.jpg",
+                "sign": "爱比讨厌更有力量。微博：我要这脸有何用 商务合作请联系rikawan@acrosh.com",
+                "official_verify": {
+                    "type": 0,
+                    "desc": "bilibili 2020百大UP主、2019年度多元创新UP主"
+                },
+                "vip": {
+                    "vipType": 2,
+                    "vipDueDate": 1653840000000,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 1,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "http://i0.hdslb.com/bfs/vip/label_annual.png",
+                        "text": "年度大会员",
+                        "label_theme": "annual_vip",
+                        "text_color": "#FFFFFF",
+                        "bg_style": 1,
+                        "bg_color": "#FB7299",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 1,
+                    "nickname_color": "#FB7299",
+                    "avatar_subscript_url": "http://i0.hdslb.com/bfs/vip/icon_Certification_big_member_22_3x.png"
+                }
+            },
+            {
+                "mid": 591867189,
+                "attribute": 0,
+                "mtime": 1614236194,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "天平阳光",
+                "face": "http://i0.hdslb.com/bfs/face/f9bf12cbc34087685a240caea1dce73b36cf886f.jpg",
+                "sign": "人民法院新闻传媒总社官方账号",
+                "official_verify": {
+                    "type": 1,
+                    "desc": "人民法院新闻传媒总社官方账号"
+                },
+                "vip": {
+                    "vipType": 0,
+                    "vipDueDate": 0,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 0,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "",
+                        "text": "",
+                        "label_theme": "",
+                        "text_color": "",
+                        "bg_style": 0,
+                        "bg_color": "",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 0,
+                    "nickname_color": "",
+                    "avatar_subscript_url": ""
+                }
+            },
+            {
+                "mid": 447261734,
+                "attribute": 0,
+                "mtime": 1621493333,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "中科院格致论道讲坛",
+                "face": "http://i2.hdslb.com/bfs/face/5f49492445777a670cb1939152ed04bcca6bebe1.jpg",
+                "sign": "我是学神扎堆的中科院格致论道讲坛，中科院全力推出的科学文化讲坛",
+                "official_verify": {
+                    "type": 1,
+                    "desc": "中科院格致论道论坛官方账号"
+                },
+                "vip": {
+                    "vipType": 2,
+                    "vipDueDate": 1636041600000,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 1,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "http://i0.hdslb.com/bfs/vip/label_annual.png",
+                        "text": "年度大会员",
+                        "label_theme": "annual_vip",
+                        "text_color": "#FFFFFF",
+                        "bg_style": 1,
+                        "bg_color": "#FB7299",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 1,
+                    "nickname_color": "#FB7299",
+                    "avatar_subscript_url": "http://i0.hdslb.com/bfs/vip/icon_Certification_big_member_22_3x.png"
+                }
+            },
+            {
+                "mid": 73842852,
+                "attribute": 0,
+                "mtime": 1621660497,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "中科院中国科普博览",
+                "face": "http://i0.hdslb.com/bfs/face/74b9cc8938b4ce2d8302443d4dd8626d66484bcf.jpg",
+                "sign": "B站科代表，妈妈再也不用担心你没地方学习了",
+                "official_verify": {
+                    "type": 1,
+                    "desc": "中国科学院科普云平台官方账号"
+                },
+                "vip": {
+                    "vipType": 2,
+                    "vipDueDate": 1656000000000,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 1,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "http://i0.hdslb.com/bfs/vip/label_annual.png",
+                        "text": "年度大会员",
+                        "label_theme": "annual_vip",
+                        "text_color": "#FFFFFF",
+                        "bg_style": 1,
+                        "bg_color": "#FB7299",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 1,
+                    "nickname_color": "#FB7299",
+                    "avatar_subscript_url": "http://i0.hdslb.com/bfs/vip/icon_Certification_big_member_22_3x.png"
+                }
+            },
+            {
+                "mid": 20165629,
+                "attribute": 2,
+                "mtime": 1622025487,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "共青团中央",
+                "face": "http://i1.hdslb.com/bfs/face/afa1435fd78c5b0f2ff3c2546d50e75bb54c3fc7.jpg",
+                "sign": "你好呀！这里皮皮团，等你很久啦！",
+                "official_verify": {
+                    "type": 1,
+                    "desc": "共青团中央 官方账号"
+                },
+                "vip": {
+                    "vipType": 2,
+                    "vipDueDate": 1645977600000,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 1,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "http://i0.hdslb.com/bfs/vip/label_annual.png",
+                        "text": "年度大会员",
+                        "label_theme": "annual_vip",
+                        "text_color": "#FFFFFF",
+                        "bg_style": 1,
+                        "bg_color": "#FB7299",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 1,
+                    "nickname_color": "#FB7299",
+                    "avatar_subscript_url": "http://i0.hdslb.com/bfs/vip/icon_Certification_big_member_22_3x.png"
+                }
+            },
+            {
+                "mid": 1402209327,
+                "attribute": 0,
+                "mtime": 1624617473,
+                "tag": null,
+                "special": 0,
+                "contract_info": {
+                    "is_contractor": false,
+                    "ts": 0,
+                    "is_contract": false
+                },
+                "uname": "CMG观察",
+                "face": "http://i0.hdslb.com/bfs/face/f3545ba3dc3cf4ef3462cdd0c115bc1dc81c5ee4.jpg",
+                "sign": "中央广播电视总台创新发展研究中心官方帐号，CMG观察：来自媒体融合C位的思考",
+                "official_verify": {
+                    "type": 1,
+                    "desc": "中央广播电视总台创新发展研究中心官方帐号"
+                },
+                "vip": {
+                    "vipType": 0,
+                    "vipDueDate": 0,
+                    "dueRemark": "",
+                    "accessStatus": 0,
+                    "vipStatus": 0,
+                    "vipStatusWarn": "",
+                    "themeType": 0,
+                    "label": {
+                        "path": "",
+                        "text": "",
+                        "label_theme": "",
+                        "text_color": "",
+                        "bg_style": 0,
+                        "bg_color": "",
+                        "border_color": ""
+                    },
+                    "avatar_subscript": 0,
+                    "nickname_color": "",
+                    "avatar_subscript_url": ""
+                }
+            }
+        ],
+        "re_version": 3822290418,
+        "total": 11
+    }
+}

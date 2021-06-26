@@ -1,6 +1,8 @@
 code/.idea
 code/__pycache__
 code/test.py
+code/ge/__pycache__
+code/ge/models/__pycache__
 
 response/*.txt
 response/*.html

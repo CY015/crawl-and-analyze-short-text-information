@@ -52,10 +52,14 @@ Python 3.6
 requests  
 pandas  
 numpy  
+sklearn  
 jieba  
 matplotlib  
 wordcloud  
-baidu-aip
+tensorflow == 1.15(cpu版本)  
+tqdm
+fastdtw  
+~~baidu-aip~~
 
 -----------------------------------------------------------------
 **注意**
@@ -71,3 +75,7 @@ baidu-aip
 1. [BiliBili野生API文档](https://github.com/SocialSisterYi/bilibili-API-collect)
 2. [Baidu NLP文档](http://ai.baidu.com/ai-doc/NLP/tk6z52b9z)
 3. [轮子地址](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
+4. [gensim训练LDA模型博客](https://blog.csdn.net/pit3369/article/details/104608947)
+   1. [gensim训练LDA仓库](https://github.com/DengYangyong/LDA_gensim)
+5. [DeepWalk知乎](https://zhuanlan.zhihu.com/p/56380812)
+   1. [DeepWalk仓库]((https://github.com/shenweichen/GraphEmbedding))
