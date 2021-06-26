@@ -51,7 +51,9 @@
 Python 3.6  
 requests  
 pandas  
-numpy  
+gensim(gensim-3.8.3-cp36-cp36m-win_amd64)  
+numpy(numpy-1.19.5+mkl-cp36-cp36m-win_amd64)  
+scipy(scipy-1.5.4-cp36-cp36m-win_amd64)  
 sklearn  
 jieba  
 matplotlib  
@@ -78,4 +80,4 @@ fastdtw
 4. [gensim训练LDA模型博客](https://blog.csdn.net/pit3369/article/details/104608947)
    1. [gensim训练LDA仓库](https://github.com/DengYangyong/LDA_gensim)
 5. [DeepWalk知乎](https://zhuanlan.zhihu.com/p/56380812)
-   1. [DeepWalk仓库]((https://github.com/shenweichen/GraphEmbedding))
+   1. [DeepWalk仓库](https://github.com/shenweichen/GraphEmbedding)
