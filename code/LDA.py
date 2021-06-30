@@ -47,7 +47,7 @@ for line in fr.readlines():
     line = [word.strip() for word in line.split(' ')]
     train.append(line)
         
-# 接下来就是模型构建的步骤了，首先构建词频矩阵
+# 模型构建，首先构建词频矩阵
 dictionary = corpora.Dictionary(train)
 corpus = [dictionary.doc2bow(text) for text in train]
 lda = models.LdaModel(corpus=corpus, id2word=dictionary, num_topics=3)
@@ -76,7 +76,7 @@ corpus_test = [dictionary.doc2bow(text) for text in test]
 topics_test = lda.get_document_topics(corpus_test)  
 labels = ['0','1','2']
 for i in range(3):
-    print('这条'+labels[i]+'评论的用户性质分布为：\n')
+    print('这条'+labels[i]+'评论的用户性质分布概率为：\n')
     print(topics_test[i],'\n')
         
 fr.close()

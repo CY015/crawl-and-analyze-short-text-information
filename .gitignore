@@ -1,6 +1,7 @@
 code/.idea
 code/__pycache__
 code/test.py
+code/commentList.md
 code/ge/__pycache__
 code/ge/models/__pycache__
 

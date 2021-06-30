@@ -135,15 +135,17 @@ def TF_IDF_jieba():
     with open('../data/Comment.txt', 'r', encoding='utf_8') as f:
         topk = jieba.analyse.extract_tags(f.read(), topK=20)
 
-    with open('../data/dict/Dict.txt', 'r', encoding='utf_16') as dic:
+    with open('../data/dict/Dict.txt', 'r', encoding='utf_8') as dic:
         dictionary = dic.read().splitlines()
 
+    # 和词典中的去重
     newWords = []
     for word in topk:
         if word not in dictionary:
             newWords.append(word)
     
-    with open('../data/dict/cusDict.txt', 'a+', encoding='utf_16') as newdict:
+    # 写新词进定制化词典
+    with open('../data/dict/cusDict.txt', 'a+', encoding='utf_8') as newdict:
         newdict.write('\n')
         for nword in newWords:
             # print(nword)
